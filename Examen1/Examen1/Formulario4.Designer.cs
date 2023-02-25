@@ -41,6 +41,7 @@
             this.SalirButton.TabIndex = 5;
             this.SalirButton.Text = "Salir";
             this.SalirButton.UseVisualStyleBackColor = true;
+            this.SalirButton.Click += new System.EventHandler(this.SalirButton_Click);
             // 
             // CalcularButton
             // 
