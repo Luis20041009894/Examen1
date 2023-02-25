@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario2));
             this.PrecioTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.CantidadTextBox = new System.Windows.Forms.TextBox();
@@ -46,13 +47,14 @@
             this.TotalVentaLabel = new System.Windows.Forms.Label();
             this.CancelarButton = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // PrecioTextBox
             // 
-            this.PrecioTextBox.Location = new System.Drawing.Point(122, 123);
+            this.PrecioTextBox.Location = new System.Drawing.Point(400, 110);
             this.PrecioTextBox.MaxLength = 10;
             this.PrecioTextBox.Name = "PrecioTextBox";
             this.PrecioTextBox.Size = new System.Drawing.Size(146, 22);
@@ -62,16 +64,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 129);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(328, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 16);
+            this.label3.Size = new System.Drawing.Size(56, 16);
             this.label3.TabIndex = 16;
             this.label3.Text = "Precio:";
             // 
             // CantidadTextBox
             // 
-            this.CantidadTextBox.Location = new System.Drawing.Point(122, 73);
-            this.CantidadTextBox.MaxLength = 4;
+            this.CantidadTextBox.Location = new System.Drawing.Point(400, 60);
+            this.CantidadTextBox.MaxLength = 3;
             this.CantidadTextBox.Name = "CantidadTextBox";
             this.CantidadTextBox.Size = new System.Drawing.Size(146, 22);
             this.CantidadTextBox.TabIndex = 15;
@@ -79,7 +82,7 @@
             // 
             // TipoProductoTextBox
             // 
-            this.TipoProductoTextBox.Location = new System.Drawing.Point(122, 26);
+            this.TipoProductoTextBox.Location = new System.Drawing.Point(400, 13);
             this.TipoProductoTextBox.Name = "TipoProductoTextBox";
             this.TipoProductoTextBox.Size = new System.Drawing.Size(146, 22);
             this.TipoProductoTextBox.TabIndex = 14;
@@ -87,18 +90,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 79);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(311, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 16);
+            this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 13;
             this.label2.Text = "Cantidad:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 32);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(275, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 16);
+            this.label1.Size = new System.Drawing.Size(109, 16);
             this.label1.TabIndex = 12;
             this.label1.Text = "Tipo Producto:";
             // 
@@ -109,13 +114,14 @@
             this.producto,
             this.cantidad,
             this.precio});
-            this.ProductoDataGridView.Location = new System.Drawing.Point(12, 167);
+            this.ProductoDataGridView.Location = new System.Drawing.Point(290, 154);
             this.ProductoDataGridView.Name = "ProductoDataGridView";
             this.ProductoDataGridView.RowHeadersWidth = 51;
             this.ProductoDataGridView.RowTemplate.Height = 24;
             this.ProductoDataGridView.Size = new System.Drawing.Size(569, 235);
             this.ProductoDataGridView.TabIndex = 11;
             this.ProductoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductoDataGridView_CellContentClick);
+            //this.ProductoDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.ProductoDataGridView_DataBindingComplete);
             // 
             // producto
             // 
@@ -140,9 +146,10 @@
             // 
             // PagarBbutton
             // 
-            this.PagarBbutton.Location = new System.Drawing.Point(310, 85);
+            this.PagarBbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PagarBbutton.Location = new System.Drawing.Point(588, 79);
             this.PagarBbutton.Name = "PagarBbutton";
-            this.PagarBbutton.Size = new System.Drawing.Size(75, 54);
+            this.PagarBbutton.Size = new System.Drawing.Size(137, 54);
             this.PagarBbutton.TabIndex = 10;
             this.PagarBbutton.Text = "Pagar";
             this.PagarBbutton.UseVisualStyleBackColor = true;
@@ -150,9 +157,10 @@
             // 
             // AgregarButton
             // 
-            this.AgregarButton.Location = new System.Drawing.Point(310, 25);
+            this.AgregarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgregarButton.Location = new System.Drawing.Point(588, 12);
             this.AgregarButton.Name = "AgregarButton";
-            this.AgregarButton.Size = new System.Drawing.Size(75, 54);
+            this.AgregarButton.Size = new System.Drawing.Size(137, 54);
             this.AgregarButton.TabIndex = 9;
             this.AgregarButton.Text = "Agregar";
             this.AgregarButton.UseVisualStyleBackColor = true;
@@ -162,7 +170,7 @@
             // 
             this.TotalPagarLabel.AutoSize = true;
             this.TotalPagarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalPagarLabel.Location = new System.Drawing.Point(469, 128);
+            this.TotalPagarLabel.Location = new System.Drawing.Point(739, 115);
             this.TotalPagarLabel.Name = "TotalPagarLabel";
             this.TotalPagarLabel.Size = new System.Drawing.Size(112, 18);
             this.TotalPagarLabel.TabIndex = 20;
@@ -172,7 +180,7 @@
             // 
             this.DescuentoLabel.AutoSize = true;
             this.DescuentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescuentoLabel.Location = new System.Drawing.Point(477, 80);
+            this.DescuentoLabel.Location = new System.Drawing.Point(757, 67);
             this.DescuentoLabel.Name = "DescuentoLabel";
             this.DescuentoLabel.Size = new System.Drawing.Size(94, 18);
             this.DescuentoLabel.TabIndex = 19;
@@ -182,7 +190,7 @@
             // 
             this.TotalVentaLabel.AutoSize = true;
             this.TotalVentaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalVentaLabel.Location = new System.Drawing.Point(475, 32);
+            this.TotalVentaLabel.Location = new System.Drawing.Point(753, 19);
             this.TotalVentaLabel.Name = "TotalVentaLabel";
             this.TotalVentaLabel.Size = new System.Drawing.Size(98, 18);
             this.TotalVentaLabel.TabIndex = 18;
@@ -190,11 +198,13 @@
             // 
             // CancelarButton
             // 
-            this.CancelarButton.Location = new System.Drawing.Point(643, 393);
+            this.CancelarButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.CancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelarButton.Location = new System.Drawing.Point(865, 302);
             this.CancelarButton.Name = "CancelarButton";
-            this.CancelarButton.Size = new System.Drawing.Size(91, 45);
+            this.CancelarButton.Size = new System.Drawing.Size(91, 87);
             this.CancelarButton.TabIndex = 21;
-            this.CancelarButton.Text = "Cancelar";
+            this.CancelarButton.Text = "Salir";
             this.CancelarButton.UseVisualStyleBackColor = true;
             this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
             // 
@@ -202,11 +212,22 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(259, 377);
+            this.richTextBox1.TabIndex = 22;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
             // Formulario2
             // 
+            this.AcceptButton = this.AgregarButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 450);
+            this.CancelButton = this.CancelarButton;
+            this.ClientSize = new System.Drawing.Size(1064, 413);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.TotalPagarLabel);
             this.Controls.Add(this.DescuentoLabel);
@@ -249,5 +270,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

@@ -65,9 +65,9 @@ namespace Examen1
             decimal descuento = await CalcularDescuento(total);
             decimal totalPagar = total - descuento;
 
-            TotalVentaLabel.Text = $"Total de la venta: {total:0.00}";
-            DescuentoLabel.Text = $"Descuento del 15%: {descuento:0.00}";
-            TotalPagarLabel.Text = $"Total a pagar: {totalPagar:0.00}";
+            TotalVentaLabel.Text = $"Total de la venta: {total:C}";
+            DescuentoLabel.Text = $"Descuento del 15%: {descuento:C}";
+            TotalPagarLabel.Text = $"Total a pagar: {totalPagar:C}";
 
         }
         private void LimpiarControles()
@@ -76,8 +76,6 @@ namespace Examen1
             PrecioTextBox.Clear();
             CantidadTextBox.Clear();
         }
-
-
 
         private void ProductoDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -91,30 +89,45 @@ namespace Examen1
 
         private void CantidadTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //{
-            //    e.Handled = true;
-            //}
-            //if (!char.IsDigit(e.KeyChar) && (e.KeyChar == '.'))
-            //    e.Handled = true;
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
-
         }
 
         private void PrecioTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            {
+                // Verificar si la tecla presionada es un número, un punto decimal o la tecla de retroceso
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
 
-            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
+                {
+                    // Si la tecla presionada no es un número, un punto decimal o la tecla de retroceso, no permitir que se ingrese
+                    e.Handled = true;
+                }
+
+                // Permitir solo un punto decimal en el cuadro de texto
+                if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+                {
+                    e.Handled = true;
+                }
+
+                // Permitir solo dos decimales después del punto o la coma decimal
+                if ((char.IsDigit(e.KeyChar)) && ((sender as TextBox).Text.IndexOf('.') > -1))
+                {
+                    int index = (sender as TextBox).Text.IndexOf('.') > -1 ? (sender as TextBox).Text.IndexOf('.') : (sender as TextBox).Text.IndexOf(',');
+                    if ((sender as TextBox).Text.Substring(index).Length >= 3)
+                    {
+                        e.Handled = true;
+                    }
+
+
+                }
+
+
             }
-            if ((e.KeyChar == '.') && (sender as TextBox).Text.IndexOf('.') > -1)
-            {
-                e.Handled = true;
-            }
+
         }
+
     }
 }

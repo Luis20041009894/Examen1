@@ -117,4 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Tercer Formulario
+
+Realice lo siguiente: Escriba una función que muestre al usuario los números de 1 al 100, pero cuando el número sea múltiplo de 3 que muestre su nombre y para los múltiplos de 5 que muestre su apellido y finalmente si el número es múltiplo de 3 y 5 debe mostrar su nombre y apellido.</value>
+  </data>
 </root>

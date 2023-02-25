@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Primer Formulario:
+
+Se pide realizar una pantalla que permita calcular el interés que una persona ganara mensualmente en una institución financiera. La persona llegará el 01 de enero del 2023 a depositar a su cuenta bancaria la cantidad de L 200,000.00, y quiere saber cuánto ganará de interés al final de cada mes (de enero a diciembre). Para ello debe crear las funciones que considere necesarias para realizar lo solicitado, sabiendo que el banco le dará un interés del 1.5% mensual.
+
+La cantidad de interés está dada por I = C·i·t, donde C es el capital, i es la tasa de interés, y t es el período de tiempo. Para mostrar los valores al usuario debe utilizar un ListBox con el nombre del mes y el valor del interés ganado.</value>
+  </data>
 </root>

@@ -129,4 +129,9 @@
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Segundo Formulario:
+
+Una empresa ofrece un descuento sobre el total de la factura y un cliente desea saber cuánto pagara al final de su compra. Realice una función asíncrona que calcule el descuento del 15% de la venta y lo muestre al usuario con su total a pagar. El usuario debe ingresar los productos que el cliente esta comprando con sus respectivos precios unitarios.</value>
+  </data>
 </root>

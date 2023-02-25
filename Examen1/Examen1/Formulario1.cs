@@ -5,45 +5,37 @@ namespace Examen1
 {
     public partial class Formulario1 : Form
     {
-
-
-
-
         public Formulario1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CalcularButton_Click(object sender, EventArgs e)
         {
-            // Variables
-            const double Capital = 200000.00;
-            const double Interes = 0.015;
-            double interesAcumulado = 0;
-            double SaldoMensual = 200000.00;
+            CalcularInteres();
 
-            // Limpiar ListBox
-            InteresListBox.Items.Clear();
+        }
+        private void CalcularInteres()
+        {
+            double capital = 200000.00;
+            double interesAcumulado = 0.00;
+            double tasaInteres = 0.015;
+            int meses = 12;
 
-            // Calcular interés mensual
-            double interesMensual = Capital * Interes;
+            ResultadosListBox.Items.Clear();
 
-
-            for (int i = 1; i <= 12; i++)
+            for (int i = 1; i <= meses; i++)
             {
-                double ahorroMensual = Capital + interesAcumulado + interesMensual;
-                InteresListBox.Items.Add(getNombreMes(i) + " : " + " L." + ahorroMensual.ToString());
-
-                // Actualizar interés acumulado
-                interesAcumulado += interesMensual;
-
-
+                double interesMes = capital * tasaInteres;
+                interesAcumulado += interesMes;
+                capital += interesMes;
+                ResultadosListBox.Items.Add($"{ObtenerNombreMes(i)}: {capital:C}");
             }
         }
-
-        private string getNombreMes(int mes)
+        private string ObtenerNombreMes(int numeroMes)
         {
-            switch (mes)
+
+            switch (numeroMes)
             {
                 case 1:
                     return "Enero";
@@ -71,14 +63,16 @@ namespace Examen1
                     return "Diciembre";
                 default:
                     return "";
+
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void SalirButton_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+
     }
 }
-
 
