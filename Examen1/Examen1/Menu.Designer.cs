@@ -30,7 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.formulario1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ejecutarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formulario2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formulario3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formulario4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,31 +44,54 @@
             this.formulario1ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1383, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // formulario1ToolStripMenuItem
             // 
+            this.formulario1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ejecutarToolStripMenuItem,
+            this.formulario2ToolStripMenuItem,
+            this.formulario3ToolStripMenuItem,
+            this.formulario4ToolStripMenuItem});
             this.formulario1ToolStripMenuItem.Name = "formulario1ToolStripMenuItem";
-            this.formulario1ToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
-            this.formulario1ToolStripMenuItem.Text = "Formulario1";
+            this.formulario1ToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
+            this.formulario1ToolStripMenuItem.Text = "Seleccione Formulario:";
             // 
-            // button1
+            // ejecutarToolStripMenuItem
             // 
-            this.button1.Location = new System.Drawing.Point(34, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 77);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ejecutarToolStripMenuItem.Name = "ejecutarToolStripMenuItem";
+            this.ejecutarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ejecutarToolStripMenuItem.Text = "Formulario1";
+            this.ejecutarToolStripMenuItem.Click += new System.EventHandler(this.ejecutarToolStripMenuItem_Click);
+            // 
+            // formulario2ToolStripMenuItem
+            // 
+            this.formulario2ToolStripMenuItem.Name = "formulario2ToolStripMenuItem";
+            this.formulario2ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.formulario2ToolStripMenuItem.Text = "Formulario2";
+            this.formulario2ToolStripMenuItem.Click += new System.EventHandler(this.formulario2ToolStripMenuItem_Click);
+            // 
+            // formulario3ToolStripMenuItem
+            // 
+            this.formulario3ToolStripMenuItem.Name = "formulario3ToolStripMenuItem";
+            this.formulario3ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.formulario3ToolStripMenuItem.Text = "Formulario3";
+            this.formulario3ToolStripMenuItem.Click += new System.EventHandler(this.formulario3ToolStripMenuItem_Click);
+            // 
+            // formulario4ToolStripMenuItem
+            // 
+            this.formulario4ToolStripMenuItem.Name = "formulario4ToolStripMenuItem";
+            this.formulario4ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.formulario4ToolStripMenuItem.Text = "Formulario4";
+            this.formulario4ToolStripMenuItem.Click += new System.EventHandler(this.formulario4ToolStripMenuItem_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1383, 812);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
@@ -81,7 +107,10 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem formulario1ToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem ejecutarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formulario2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formulario3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formulario4ToolStripMenuItem;
     }
 }
 
