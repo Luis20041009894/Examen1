@@ -31,7 +31,7 @@ namespace Examen1
 
         private void formulario4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Formulario4 formulario4 = new Formulario4();
+            Formulario2 formulario4 = new Formulario2();
             formulario4.Show();
         }
     }
