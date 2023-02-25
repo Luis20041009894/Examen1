@@ -36,15 +36,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ProductoDataGridView = new System.Windows.Forms.DataGridView();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PagarBbutton = new System.Windows.Forms.Button();
             this.AgregarButton = new System.Windows.Forms.Button();
             this.TotalPagarLabel = new System.Windows.Forms.Label();
             this.DescuentoLabel = new System.Windows.Forms.Label();
             this.TotalVentaLabel = new System.Windows.Forms.Label();
             this.CancelarButton = new System.Windows.Forms.Button();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ProductoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -53,6 +53,7 @@
             // PrecioTextBox
             // 
             this.PrecioTextBox.Location = new System.Drawing.Point(122, 123);
+            this.PrecioTextBox.MaxLength = 10;
             this.PrecioTextBox.Name = "PrecioTextBox";
             this.PrecioTextBox.Size = new System.Drawing.Size(146, 22);
             this.PrecioTextBox.TabIndex = 17;
@@ -70,6 +71,7 @@
             // CantidadTextBox
             // 
             this.CantidadTextBox.Location = new System.Drawing.Point(122, 73);
+            this.CantidadTextBox.MaxLength = 4;
             this.CantidadTextBox.Name = "CantidadTextBox";
             this.CantidadTextBox.Size = new System.Drawing.Size(146, 22);
             this.CantidadTextBox.TabIndex = 15;
@@ -107,13 +109,34 @@
             this.producto,
             this.cantidad,
             this.precio});
-            this.ProductoDataGridView.Location = new System.Drawing.Point(12, 203);
+            this.ProductoDataGridView.Location = new System.Drawing.Point(12, 167);
             this.ProductoDataGridView.Name = "ProductoDataGridView";
             this.ProductoDataGridView.RowHeadersWidth = 51;
             this.ProductoDataGridView.RowTemplate.Height = 24;
-            this.ProductoDataGridView.Size = new System.Drawing.Size(604, 235);
+            this.ProductoDataGridView.Size = new System.Drawing.Size(569, 235);
             this.ProductoDataGridView.TabIndex = 11;
             this.ProductoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductoDataGridView_CellContentClick);
+            // 
+            // producto
+            // 
+            this.producto.HeaderText = "Producto";
+            this.producto.MinimumWidth = 6;
+            this.producto.Name = "producto";
+            this.producto.Width = 125;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.MinimumWidth = 6;
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Width = 125;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio";
+            this.precio.MinimumWidth = 6;
+            this.precio.Name = "precio";
+            this.precio.Width = 125;
             // 
             // PagarBbutton
             // 
@@ -175,27 +198,6 @@
             this.CancelarButton.UseVisualStyleBackColor = true;
             this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
             // 
-            // producto
-            // 
-            this.producto.HeaderText = "Producto";
-            this.producto.MinimumWidth = 6;
-            this.producto.Name = "producto";
-            this.producto.Width = 125;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.MinimumWidth = 6;
-            this.cantidad.Name = "cantidad";
-            this.cantidad.Width = 125;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio";
-            this.precio.MinimumWidth = 6;
-            this.precio.Name = "precio";
-            this.precio.Width = 125;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -219,6 +221,7 @@
             this.Controls.Add(this.PagarBbutton);
             this.Controls.Add(this.AgregarButton);
             this.Name = "Formulario2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario4";
             ((System.ComponentModel.ISupportInitialize)(this.ProductoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

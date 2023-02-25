@@ -91,12 +91,17 @@ namespace Examen1
 
         private void CantidadTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
+            //if (!char.IsNumber(e.KeyChar))
+            //{
+            //    e.Handled = true;
+            //}
+            //if (!char.IsDigit(e.KeyChar) && (e.KeyChar == '.'))
+            //    e.Handled = true;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
-            if (!char.IsDigit(e.KeyChar) && (e.KeyChar == '.'))
-                e.Handled = true;
+
         }
 
         private void PrecioTextBox_KeyPress(object sender, KeyPressEventArgs e)

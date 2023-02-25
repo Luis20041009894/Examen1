@@ -34,5 +34,16 @@ namespace Examen1
             Formulario2 formulario4 = new Formulario2();
             formulario4.Show();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void formulario4ToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Formulario4 formulario4 = new Formulario4();
+            formulario4.Show();
+        }
     }
 }

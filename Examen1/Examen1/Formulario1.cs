@@ -20,6 +20,7 @@ namespace Examen1
             const double Capital = 200000.00;
             const double Interes = 0.015;
             double interesAcumulado = 0;
+            double SaldoMensual = 200000.00;
 
             // Limpiar ListBox
             InteresListBox.Items.Clear();
@@ -27,7 +28,7 @@ namespace Examen1
             // Calcular interés mensual
             double interesMensual = Capital * Interes;
 
-            // Calcular ahorro mensual y mostrar en ListBox
+
             for (int i = 1; i <= 12; i++)
             {
                 double ahorroMensual = Capital + interesAcumulado + interesMensual;
@@ -35,7 +36,6 @@ namespace Examen1
 
                 // Actualizar interés acumulado
                 interesAcumulado += interesMensual;
-
 
 
             }
@@ -72,6 +72,11 @@ namespace Examen1
                 default:
                     return "";
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
